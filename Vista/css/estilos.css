@@ -1,0 +1,225 @@
+body{ 
+    background-color: #fff( 100, 255, 150);
+    font-family: Arial, helvetica, sans-serif;
+  }
+  .docIcon{
+    color:rgba(23,162,184,0.9)
+  }
+  .navegationBar{
+    border: 1px solid rgba(23,162,184,0.9);
+  }
+  .title-navbar {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(23,162,184,0.9) !important;
+  }
+  .navegationBar{
+    margin-bottom: 40px;
+    background-color: rgba(23,162,184,0.2) !important;
+  }
+  .navegationBarRegister{
+    margin-bottom: 20px;
+    background-color: rgba(23,162,184,0.2) !important;
+    border: 1px solid rgba(23,162,184,0.9);
+  }
+  .containerLogin{
+    border: 2px solid #17a2b8;
+    border-radius: 10px;
+    margin: 10px;
+    padding:  30px 45px;
+    background-color: rgba(23,162,184,0.2);
+  }
+  .containerRegister{
+    border: 2px solid #17a2b8;
+    border-radius: 10px;
+    padding:  30px 45px;
+    background-color: rgba(23,162,184,0.2);
+  }
+  .loginImg{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .RegisterImg{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .loginImg img{
+    border: 3px solid #17a2b8;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .inputName, .inputLastName{
+    margin-bottom: 25px;
+  }
+  .inputBtnSend {
+    margin-bottom: 25px;
+  }
+  .textCreatePassword{
+    font-size: 13px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .register-title h2{
+    font-size: 35px;
+    color: #17a2b8;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  .registerIcon {
+    color: #17a2b8;
+  }
+  .createUser-title h2{
+    font-size: 30px;
+    color: #17a2b8;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  .inputBtnCreate{
+    text-align: right;
+  }
+  .permissionsUser{
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: underline;
+  }
+  .createUser label {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(23,150,174,1);
+  }
+  .containerPermissionsUser{
+    border: 2px solid #17a2b8;
+    background-color: rgba(23,162,184,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .iconAddUser{
+    text-align: center;
+    margin-bottom: 25px;
+    margin-right: 10px;
+  }
+  .iconAddUser i{
+    border: 3px solid #17a2b8;
+    border-radius: 50%;
+    padding: 15px;
+  }
+  .selectorRol{
+    margin-left: 10px;
+  }
+  .containerCarga{
+    border: 2px dashed #17a2b8;
+    border-radius: 10px;
+    margin: 10px;
+    padding:  30px 45px;
+    background-color: rgba(23,162,184,0.2);
+  }
+  .containerCarga{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  .fa-upload{
+    font-size:80px;
+  }
+  .btnUpload{
+    text-align: center;
+  }  
+  .custodia-title h2{
+    font-size: 30px;
+    color: #17a2b8;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  .custodiaTab {
+    width: 50%;
+  }
+  .custodiaContainerTab{
+    margin-left: 25%;
+  }
+  .docIcon{
+    color:rgba(23,162,184,0.9);
+  }
+  .navegationBar{
+    margin-bottom: 60px;
+    background-color: rgba(23,162,184,0.2) !important;
+  }
+  .containerLoginNew{
+    border: 2px solid #17a2b8;
+    border-radius: 10px;
+    margin: 10px;
+    padding:  15px 35px;
+    background-color: rgba(23,162,184,0.2);
+  }
+  .loginImg i{
+    border: 3px solid #17a2b8;
+    border-radius: 50%;
+    padding: 20px;
+  }
+  .loginIcon {
+    color:rgba(23,162,184,0.9);
+    font-size: 45px;
+  }
+  .inputMail, .inputPassword{
+    margin-bottom: 25px;
+  }
+  .seeUser-title h2{
+    font-size: 35px;
+    color: #17a2b8;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  .creatBtnUser{
+    text-align: right;
+  }
+  .fa-file-pdf{
+    font-size: 30px;
+    color: #17a2b8;
+  }
+  .headDatatable{
+    background: rgba(120,120,120,0.3);
+  }
+  .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(23,162,184,0.2);
+  }
+  .divContainer{
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .tableContainer tr{
+    margin-bottom:25px !important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
