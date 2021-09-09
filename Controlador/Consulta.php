@@ -12,44 +12,35 @@
  *
  * @author Laura
  */
-class HomeController
+class ConsultaController
 {
   
 
   public function __construct()
   {
-      require_once 'Modelo/Usuario.php';
-      require_once 'Modelo/Permiso.php';
-  }
+        require_once 'Modelo/Usuario.php';
+        require_once 'Modelo/Permiso.php';
+  } 
 
   public function index() {
-               
-        require_once 'Vista/html/home.php';
- }
- 
-  public function session() {
-      
-      session_start();
+        session_start();
         $mail =  !empty($_SESSION['correo']) ? $_SESSION['correo'] : null;
         if($mail){
             $usuarios = new Usuario_Model();
             $permisos = new Permiso_Model();
             
             $data["titulos"] = "Usuarios";
-            $data["usuarios"] = $usuarios->get_usuarios();
             $data["usuarioLogin"] = $usuarios->get_usuario_by_email($mail);
             foreach ($permisos->get_permisos($data["usuarioLogin"]['idUsuario']) as $key => $permiso) {
                 $data['permisos'][] = $permiso['nombre'];
             }
-            require_once 'Vista/html/homeInSession.php';
-             
+                require_once 'Vista/html/consultarHistoricos.php';             
         } else {
             $data["session"] = null;
             require_once 'Vista/html/login.php';
-        }
-        
-    
+        }  
     }
+ 
 }
 
 ?>

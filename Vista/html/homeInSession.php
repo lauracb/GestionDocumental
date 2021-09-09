@@ -24,14 +24,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <i class="far fa-file-alt docIcon"></i>
-      <a class="navbar-brand title-navbar" href="index.php">Gestión documental</a>
+      <a class="navbar-brand title-navbar" href="<?php echo $data['session'] ? 'index.php?c=Home&a=session' : 'index.php'?>">Gestión documental</a>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home |</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Hola <?php echo $data["usuarioLogin"]['nombres']; ?></a>
           </li>
           <li class="nav-item ">
-              <a class="nav-link" href="index.php?c=login">Ingresar |</a>
+            <a class="nav-link" href="index.php?c=Login&a=logout">Salir</a>
           </li>
         </ul>
     </div>
@@ -42,15 +42,26 @@
 <!---Contenido-->
 <div class="container">
   <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4 containerLogin loginImg">
+    <?php if($data["usuarioLogin"]['rol'] == 1): ?>
+    <div class="col-md-3 containerLogin loginImg">
         <div class="">
-            <h2>Bienvenido al gestor documental</h2>
-            <p>Aquí puedes realizar un control a tus documentos y digitalizar la información documental.</p>
+            <h2><a href="index.php?c=Usuario">Gestión de Usuarios</a></h2>
+            <p>Aquí puedes realizar un control de todos los usuarios de la aplicación.</p>
         </div>
-        
     </div>
-    <div class="col-md-4"></div>
+    <?php endif ?>
+    <div class="col-md-3 containerLogin loginImg">
+       <div>
+           <h2><a href="index.php?c=Documento">Gestión de Documentos</a></h2>
+          <p>Aquí puedes realizar la gestión documental.</p>
+      </div> 
+    </div>
+    <div class="col-md-3 containerLogin loginImg">
+        <div class="">
+            <h2><a href="index.php?c=Consulta">Consultas</a></h2>
+            <p>Aquí puedes realizar consulta de documentos en el inventario.</p>
+        </div> 
+    </div>
   </div>
 </div>
 <!---Fin Contenido-->

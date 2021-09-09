@@ -56,7 +56,7 @@ class LoginController
     } else {
         session_start();
         $_SESSION['correo'] = $result['correo'];
-        header('location: /GestionDocumental/index.php?c=Usuario');
+        header('location: /GestionDocumental/index.php?c=Home&a=session');
     }
   }
 

@@ -33,9 +33,6 @@
           <li class="nav-item active">
               <a class="nav-link" href="index.php?c=login">Ingresar |</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="index.php?c=registro">Registrarse</a>
-          </li>
         </ul>
     </div>
     </div>
@@ -57,7 +54,7 @@
         <button type="submit" class="btn btn-info inputBtnSend">Ingresar</button>
       </form>
       <div class="textCreatePassword">Si no tienes una cuenta</div>
-      <div class="textCreatePassword"><a href="index.php?c=registro">Haz clic para crear una</a></div>
+      <div class="textCreatePassword">Contáctate con el administrador</div>
     </div>
     <div class="col-md-4"></div>
   </div>

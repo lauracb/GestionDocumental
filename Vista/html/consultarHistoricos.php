@@ -24,25 +24,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <i class="far fa-file-alt docIcon"></i>
-      <a class="navbar-brand title-navbar" href="#">Gestión documental</a>
+      <a class="navbar-brand title-navbar" href="<?php echo $data["usuarioLogin"] ? 'index.php?c=Home&a=session' : 'index.php'?>">Gestión documental</a>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <?php if(isset($data["permisos"])):?>
-            <select class="form-control mr-sm-2" type="text" placeholder=""  name="cars" id="cars">
-              <?php foreach($data["permisos"] as $permiso):?>
-                <option value="<?php echo $permiso;?>" <?php echo $permiso == 'administrador' ? 'selected' : ''?>><?php echo $permiso;?></option>
-              <?php endforeach;?>
-            </select>
+                <select class="form-control mr-sm-2" type="text" placeholder="" name="cars" id="cars">
+                  <?php foreach($data["permisos"] as $permiso):?>
+                    <option value="<?php echo $permiso;?>" <?php echo $permiso == 'consultar' ? 'selected' : ''?>><?php echo $permiso;?></option>
+                  <?php endforeach;?>
+                </select>
             <?php endif;?>
           </li>
-          <li class="nav-item">
-            <select class="form-control mr-sm-2" type="text" placeholder="" disabled="true" name="cars" id="cars">
-              <option value="<?php echo $data["usuarioLogin"]['rol'];?>"><?php echo $data["usuarioLogin"]['rol'] == 1 ? 'Administrador' : 'Contratista';?></option>
-          </select>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Hola <?php echo $data["usuarioLogin"]['nombres']; ?></a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="index.php?c=Login&a=logout">Salir</a>
+            <a class="nav-link" href="#">Salir</a>
           </li>
         </ul>
     </div>

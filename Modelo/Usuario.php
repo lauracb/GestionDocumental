@@ -62,50 +62,5 @@ class Usuario_Model{
     }
     
     
-//    private $flujos;
-//    private $nombre;
-//    private $apellido;
-//    private $password;
-//    private $correo;
-//    private $secretaria;
-//    private $subsecretaria;
-//    
-//    function __construct($flujos, $nombre, $apellido, $password, $correo, $secretaria, $subsecretaria) {
-//        $this->flujos = $flujos;
-//        $this->nombre = $nombre;
-//        $this->apellido = $apellido;
-//        $this->password = $password;
-//        $this->correo = $correo;
-//        $this->secretaria = $secretaria;
-//        $this->subsecretaria = $subsecretaria;
-//    }
-//    
-//    function obtenerFlujos(){
-//        return $this->flujos;
-//    }
-//    
-//    function obtenerNombre(){
-//        return $this->nombre;
-//    }
-//    
-//    function obtenerApellido(){
-//        return $this->apellido;
-//    }
-//    
-//    function obtenerPassword(){
-//        return $this->password;
-//    }
-//    
-//    function obtenerCorreo(){
-//        return $this->correo;
-//    }
-//    
-//    function obtenerSecretaria(){
-//        return $this->secretaria;
-//    }
-//    
-//    function obtenerSubsecretaria(){
-//        return $this->subsecretaria;
-//    }
 
 }

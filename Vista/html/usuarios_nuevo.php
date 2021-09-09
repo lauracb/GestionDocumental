@@ -24,7 +24,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <i class="far fa-file-alt docIcon"></i>
-      <a class="navbar-brand title-navbar" href="<?php echo $data['session'] ? 'index.php?c=Usuario' : 'index.php'?>">Gestión documental</a>
+      <a class="navbar-brand title-navbar" href="<?php echo $data['session'] ? 'index.php?c=Home&a=session' : 'index.php'?>">Gestión documental</a>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">

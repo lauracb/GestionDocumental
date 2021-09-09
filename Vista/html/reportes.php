@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
     <!---Estilos-->
     <link rel="stylesheet" type="text/css" href="Vista/css/estilos.css">
     <!---DataTable-->
@@ -13,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <!---Iconos-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title><?php echo data["$titulos"]; ?></title>
+    <title>Ver Históricos</title>
  </head>
  <body>
 
@@ -24,7 +23,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <i class="far fa-file-alt docIcon"></i>
-      <a class="navbar-brand title-navbar" href="<?php echo $data['session'] ? 'index.php?c=Home&a=session' : 'index.php'?>">Gestión documental</a>
+      <a class="navbar-brand title-navbar" href="<?php echo $data["usuarioLogin"] ? 'index.php?c=Documento' : 'index.php'?>">Gestión documental</a>
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -36,13 +35,11 @@
                 </select>
             <?php endif;?>
           </li>
-          <li class="nav-item">
-            <select class="form-control mr-sm-2" type="text" placeholder="" disabled="true" name="cars" id="cars">
-                <option value="<?php echo $data["usuarioLogin"]['rol'];?>"><?php echo $data["usuarioLogin"]['rol'] == 1 ? 'Administrador' : 'Contratista';?></option>
-          </select>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">Hola <?php echo $data["usuarioLogin"]['nombres']; ?></a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="index.php?c=Login&a=logout">Salir</a>
+            <a class="nav-link" href="#">Salir</a>
           </li>
         </ul>
     </div>
@@ -58,50 +55,80 @@
       <div class="seeUser-title">
         <div class="row">
           <div class="col-md-6">
-            <h2>Ver usuarios</h2>
+            <h2>Ver Reportes</h2>
           </div>
-          <div class="col-md-6 creatBtnUser">
-            <a href="index.php?c=Usuario&a=nuevo" type="button" class="btn btn-info">Crear Usuario</a>
-          </div>
+      </div>
+
+      <div>Busca aquí:</div>
+      <div class="row">
+        <div class="col-md-8">
+        <input type="text" class="form-control" placeholder="Buscar por caja, proceso, nombre contribuyente, identificación, tipo de renta">
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-info"><i class="fa fa-search"></i>Buscar</button>
         </div>
       </div>
+      <br><br>
 
       <div class="row">
         <div class="col">                
           <table id="dataTableGestion" class="table-striped" style="width:100%">
-            <thead>
+            <thead class="headDatatable">
               <tr>
-                  <th>Nombres</th>
-                  <th>Apellidos</th>
-                  <th>Cedula</th>
-                  <th>Email</th>
-                  <th>Opciones</th>                                              
+                <th>Documento contribuyente</th>
+                <th>Nombre contribuyente</th>
+                <th>Radicado</th>
+                <th>Tipo de renta</th>
+                <th>tipo documental</th>
+                <th>Abogado</th>
+                <th>caja</th>
+                <th>PDF</th>
               </tr>
             </thead>
             <tbody>
-              <?php foreach($data["usuarios"] as $dato){
-                  echo "<tr>";
-                  echo "<td>".$dato["nombres"]."</td>";
-                  echo "<td>".$dato["apellidos"]."</td>";
-                  echo "<td>".$dato["cedula"]."</td>";
-                  echo "<td>".$dato["correo"]."</td>";
-                  echo "<td><a href='index.php?c=Usuario&a=modificar&id=".$dato["idUsuario"]."' class='btn btn-sm btn-light'>Editar</a>
-                  <a href='index.php?c=Usuario&a=eliminar&id=".$dato["idUsuario"]."' class='btn btn-sm btn-light'>Eliminar</a></td>";
-                  echo "</tr>";
-              } ?>
+              <tr>
+                <td>1035265841</td>
+                <td>Pedro Alvares</td>
+                <td>58011</td>
+                <td>Predial</td>
+                <td>Exepcion</td>
+                <td>1011</td>
+                <td>CP123</td>
+                <td><i class="fa fa-file-pdf"></i></td>
+              </tr>
+              <tr>
+                <td>1136275942</td>
+                <td>Carlos Romero</td>
+                <td>58012</td>
+                <td>Predial</td>
+                <td>Sentencia</td>
+                <td>1012</td>
+                <td>CP124</td>
+                <td><i class="fa fa-file-pdf"></i></td>
+              </tr>
+              <tr>
+                <td>1237286043</td>
+                <td>Juan Hincapie</td>
+                <td>58013</td>
+                <td>predial</td>
+                <td>Sentencia</td>
+                <td>1013</td>
+                <td>CP125</td>
+                <td><i class="fa fa-file-pdf"></i></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
-      <br>
     </div>
   </div>
 </div>
 <!---Fin Contenido-->
 
 <!---Scripts Data table-->
+<script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" ></script>
-<script src="Vista/js/script.js"></script>
+<script src="Vista/js/script.js" ></script>
 <!---Fin Scripts Data table-->
 </body>
 </html>
